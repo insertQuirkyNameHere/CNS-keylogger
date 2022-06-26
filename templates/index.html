@@ -1,0 +1,22 @@
+{%extends './base.html'%}
+
+{%block stylesheets%}
+<link rel="stylesheet" href="/static/css/index.css">
+{%endblock%}
+
+{%block title%}Homepage{%endblock%}
+
+{%block content%}
+<div id="before-click">
+    <form method="post">
+        {%csrf_token%}
+        <button id="rec-btn">Start recording</button>
+    </form>
+</div>
+
+<div id="after-click">
+    Recording...
+</div>
+
+<script src="/static/js/index.js"></script>
+{%endblock%}

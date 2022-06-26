@@ -1,0 +1,30 @@
+{%extends './base.html'%}
+{%block stylesheets%}<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">{%endblock%}
+{%block title%}Analysis{%endblock%}
+
+{%block content%}
+<section>
+    <h2>Typed in text</h2>
+    <p>{{text}}</p>
+</section>
+
+<section>
+    <h2>Analysis</h2>
+    <table class="table table-dark table-striped-columns" id="analysis-table">
+        <tr>
+            <th>Character</th>
+            <th>Number of occurences</th>
+        </tr>
+
+
+        {%for k,v in charFrequencies.items%}
+        <tr>
+            <td>{{k}}</td>
+            <td>{{v}}</td>
+        </tr>
+        {%endfor%}
+
+    </table>
+    
+</section>
+{%endblock%}

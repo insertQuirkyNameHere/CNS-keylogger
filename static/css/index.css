@@ -1,0 +1,9 @@
+main{
+    justify-content: center;
+    align-items: center;
+}
+
+#after-click{
+    display: none;
+    font-size: 2rem;
+}
